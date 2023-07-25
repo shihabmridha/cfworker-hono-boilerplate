@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "dev": "wrangler dev src/index.ts",
+    "deploy:dev": "wrangler deploy --env staging --minify src/index.ts",
+    "deploy:prod": "wrangler deploy --env production --minify src/index.ts"
+  },
+  "dependencies": {
+    "crypto-js": "^4.1.1",
+    "hono": "^3.3.2"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230717.1",
+    "@types/crypto-js": "^4.1.1",
+    "@types/node": "^20.4.4",
+    "@typescript-eslint/eslint-plugin": "^5.59.9",
+    "@typescript-eslint/parser": "^5.59.9",
+    "eslint": "^8.42.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.8"
+  }
+}
