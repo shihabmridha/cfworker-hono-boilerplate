@@ -1,10 +1,10 @@
 import { cors } from 'hono/cors';
 import { HTTPException } from 'hono/http-exception';
 import { jwt } from 'hono/jwt';
-import { HonoAppApp } from './types';
+import { HonoApp } from './types';
 import router from './routes';
 
-const app = new HonoAppApp();
+const app = new HonoApp();
 
 // Allow cors for all paths
 app.use('*', cors());

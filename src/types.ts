@@ -2,12 +2,7 @@ import { Hono } from 'hono';
 
 type Bindings = {
   JWT_SECRET: string;
-  DABABASE_HOST: string;
-  DABABASE_USERNAME: string;
-  DABABASE_PASSWORD: string;
-  DABABASE_NAME: string;
-  //   MY_BUCKET: R2Bucket
-  //   PASSWORD: string
+  DB: D1Database;
 };
 
-export class HonoAppApp extends Hono<{ Bindings: Bindings }> {}
+export class HonoApp extends Hono<{ Bindings: Bindings }> {}

@@ -1,20 +1,22 @@
-## Work in progress (No DB connection yet)
+## Work in progress (D1 database connection)
 
-Install `wrangler` cli.
+Create a D1 database from cloudflare dashboard and update your `wrangler.toml` file with proper database name and id.
 
 ```
-yarn install
-yarn run dev
+pnpm install
+pnpm run dev
 ```
 
 ### Staging deployment
+Make sure to set proper variables/bindings in `wrangler.toml` file.
 
 ```
-yarn run deploy:dev
+pnpm run deploy:dev
 ```
 
 ### Production deployment
+Make sure to set proper variables/bindings in `wrangler.toml` file.
 
 ```
-yarn run deploy:prod
+pnpm run deploy:prod
 ```

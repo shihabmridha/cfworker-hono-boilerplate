@@ -1,13 +1,30 @@
-name = "HonoApp"
-compatibility_date = "2023-01-01"
+name = "honoapp"
+compatibility_date = "2023-09-04"
 compatibility_flags = [ "nodejs_compat" ]
 
 [placement]
 mode = "smart"
 
+[dev]
+ip="localhost"
+port = 3000
+local_protocol = "http"
+
 [vars]
-DABABASE_HOST = "localhost"
-DABABASE_USERNAME = ""
-DABABASE_PASSWORD = ""
-DABABASE_NAME = ""
 JWT_SECRET = "secret"
+
+[env.staging.vars]
+JWT_SECRET = "secret"
+
+[env.production.vars]
+JWT_SECRET = "secret"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "db-local"
+database_id = "D1-DATABASE-ID"
+
+[[env.staging.d1_databases]]
+binding = "DB"
+database_name = "db-staging"
+database_id = "D1-DATABASE-ID"

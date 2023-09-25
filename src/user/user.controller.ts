@@ -1,7 +1,7 @@
-import { HonoAppApp } from '../types';
+import { HonoApp } from '../types';
 import userService from './user.service';
 
-export default (mainApp: HonoAppApp, protectedApp: HonoAppApp) => {
+export default (_: HonoApp, protectedApp: HonoApp) => {
   protectedApp.get('/me', async (c) => {
     const jwtPayload = c.get('jwtPayload');
     const dto = await userService.get(jwtPayload.id);
