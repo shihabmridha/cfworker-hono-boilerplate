@@ -3,6 +3,7 @@ import { HTTPException } from 'hono/http-exception';
 import { jwt } from 'hono/jwt';
 import { HonoApp } from './types';
 import router from './routes';
+import database from './database';
 
 const app = new HonoApp();
 
@@ -20,6 +21,9 @@ app.use('/auth/*', async (c, next) => {
 
   return auth(c, next);
 });
+
+// DB connection
+database(app);
 
 // Register all the routes
 router(app);
